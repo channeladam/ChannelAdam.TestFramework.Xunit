@@ -2,6 +2,6 @@ mode: ContinuousDeployment
 continuous-delivery-fallback-tag: ""
 branches:
   main:
-    regex: ^main
+    regex: ^main$
     tag: ""
     increment: Patch
