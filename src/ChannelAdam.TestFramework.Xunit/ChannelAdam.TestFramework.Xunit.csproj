@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net5.0;netstandard2.0</TargetFrameworks>
+    <Version>0.0.0</Version>
+    <Authors>Adam Craven</Authors>
+    <Company>Adam Craven</Company>
+    <Product>ChannelAdam.TestFramework.Xunit</Product>
+    <Description>A .NET library for using xUnit (and Moq) on top of the ChannelAdam Test Framework.</Description>
+    <Copyright>Copyright 2020 Adam Craven</Copyright>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/channeladam/ChannelAdam.TestFramework.Xunit</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/channeladam/ChannelAdam.TestFramework.Xunit</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageIconUrl>https://devzone.channeladam.com/img/channeladam/channeladam-logo.png</PackageIconUrl>
+    <PackageTags>ChannelAdam,Tests,Unit,Integration,xUnit</PackageTags>
+    <PackageReleaseNotes>
+1.0.0 - Created, Multitarget .NET Standard 2.0 and Net5.0, enabled nullable reference types
+    </PackageReleaseNotes>
+    <IsPackable>true</IsPackable>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <IncludeSource>true</IncludeSource>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net5.0' ">
+    <Nullable>enable</Nullable>
+    <WarningsAsErrors>CS8600;CS8602;CS8603</WarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" $(Nullable) != 'enable' ">
+    <NoWarn>$(NoWarn);CS8632</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ChannelAdam.TestFramework.Moq" Version="3.0.1" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="MicrosoftExtensions.Logging.Xunit" Version="1.0.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+  </ItemGroup>
+
+</Project>
