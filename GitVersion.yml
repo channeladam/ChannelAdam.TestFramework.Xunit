@@ -1,6 +1,6 @@
 mode: ContinuousDeployment
 continuous-delivery-fallback-tag: ""
 branches:
-  master:
+  main:
     tag: ""
     increment: Patch
