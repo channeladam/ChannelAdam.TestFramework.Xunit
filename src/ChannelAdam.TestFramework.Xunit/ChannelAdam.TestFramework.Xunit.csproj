@@ -15,7 +15,7 @@
     <PackageIconUrl>https://devzone.channeladam.com/img/channeladam/channeladam-logo.png</PackageIconUrl>
     <PackageTags>ChannelAdam,Tests,Unit,Integration,xUnit</PackageTags>
     <PackageReleaseNotes>
-1.0.0 - Created, Multitarget .NET Standard 2.0 and Net5.0, enabled nullable reference types
+1.0.1 - Created, Multitarget .NET Standard 2.0 and Net5.0, enabled nullable reference types
     </PackageReleaseNotes>
     <IsPackable>true</IsPackable>
     <IncludeSymbols>true</IncludeSymbols>

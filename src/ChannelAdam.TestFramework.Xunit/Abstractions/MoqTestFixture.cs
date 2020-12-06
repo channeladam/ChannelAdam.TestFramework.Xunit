@@ -30,15 +30,7 @@ namespace ChannelAdam.TestFramework.Xunit.Abstractions
         /// <summary>
         /// Initializes a new instance of the <see cref="MoqTestFixture" /> class.
         /// </summary>
-        protected MoqTestFixture(Xunit.Abstractions.ITestOutputHelper output) : base(new LogAssert(output))
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="MoqTestFixture" /> class.
-        /// </summary>
-        /// <param name="logger">The logger to use.</param>
-        protected MoqTestFixture(ISimpleLogger logger) : base(logger, new LogAssert(logger))
+        protected MoqTestFixture(Xunit.Abstractions.ITestOutputHelper output) : base(new SimpleXunitLogger(output), new LogAssert(output))
         {
         }
 
